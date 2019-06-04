@@ -13,7 +13,7 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"]
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
   },
   target: 'web',
   devtool: '#source-map',
@@ -47,21 +47,27 @@ module.exports = {
         ]
       },
       {
-        // Loads images into CSS and Javascript files
-        test: /\.jpg$/,
-        use: [{loader: "url-loader"}]
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ['file-loader']
       },
-      {
+      //{
         // Loads CSS into a file when you import it via Javascript
         // Rules are set in MiniCssExtractPlugin
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        //test: /\.css$/,
+        //use: [MiniCssExtractPlugin.loader, 'css-loader']
+      //},
+      {
+        test: /\.(scss|css)$/,
+        use: [
+            'style-loader',
+            'css-loader',
+        ],
       },
     ]
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/html/index.html",
+      template: "./src/index.html",
       filename: "./index.html"
     }),
     new MiniCssExtractPlugin({
