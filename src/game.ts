@@ -467,7 +467,8 @@ export default class Game {
         content = content + "Unknown"
     }
     
-    var region = g_regions[g_hexRegions[coord]].name;
+    let hexRegion = g_hexRegions[coord];
+    let region = g_regions[hexRegion].name;
     content = content + "<br><b>Region:</b> " + region;
     
     
