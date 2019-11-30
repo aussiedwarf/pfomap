@@ -238,8 +238,8 @@ export default class App extends React.Component {
 		    </div>
 		    <div id="navigation">
           <div className="alignRight">
-            <button type="button" className="button" id="bZoomIn" onMouseDown={this.zoomInOnDown} onMouseUp={this.zoomInOnUp}>Zoom In</button>
-            <button type="button" className="button" id="bZoomOut" onMouseDown={this.zoomOutOnDown} onMouseUp={this.zoomOutOnUp}>Zoom Out</button>
+            <button type="button" className="button" id="bZoomIn" onMouseDown={this.zoomInOnDown} onMouseUp={this.zoomInOnUp} onTouchStart={this.zoomInOnDown} onTouchEnd={this.zoomInOnUp}>Zoom In</button>
+            <button type="button" className="button" id="bZoomOut" onMouseDown={this.zoomOutOnDown} onMouseUp={this.zoomOutOnUp} onTouchStart={this.zoomOutOnDown} onTouchEnd={this.zoomOutOnUp}>Zoom Out</button>
           </div>
         </div>
       
