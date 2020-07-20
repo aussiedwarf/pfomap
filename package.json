@@ -3,10 +3,10 @@
   "version": "2.0.0",
   "description": "Map for Pathfinder Online",
   "keywords": [
-    "OpenShift",
+    "typescript",
     "Node.js",
     "application",
-    "openshift"
+    "react"
   ],
   "author": {
     "name": "Eden Harris",
@@ -16,7 +16,7 @@
   "homepage": "http://www.pfomap.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openshift/origin-server"
+    "url": "https://pfomap.com/"
   },
   "scripts": {
     "buildDev": "rm -rf dist && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
@@ -30,7 +30,6 @@
   },
   "dependencies": {
     "@types/express": "*",
-    "@types/gl-matrix": "*",
     "@types/node": "*",
     "@types/react": "*",
     "@types/react-dom": "*",

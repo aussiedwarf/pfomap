@@ -316,31 +316,31 @@ export default class Game {
     
     this.loaded = 0;
   
-    this.iconFighter.src = imageFighter;
-    this.iconCleric.src = imageCleric;
-    this.iconRogue.src = imageRogue;
-    this.iconWizard.src = imageWizard;
-    this.iconCraft.src = imageCraft;
-    this.iconCoin.src = imageCoin;
-    this.iconCastle.src = imageCastle;
-    this.iconLion.src = imageLion;
-    this.iconRuins.src = imageRuins;
-    this.iconVillage.src = imageVillage;
-    this.iconX.src = imageX;
-    this.iconTower.src = imageTower;
-    this.iconStar.src = imageStar;
-    this.iconClanmoot.src = imageClanmoot;
-    this.iconPointOfInterest.src = imagePOI;
-    this.iconTotem.src = imageTotem;
-    this.iconSkullCrossbones.src = imageSkull;
-    this.iconMonument.src = imageMonument;
-    this.iconMonolith.src = imageMonolith;
-    this.iconWaterfall.src = imageWaterfall;
+    this.iconFighter.src = imageFighter.default;
+    this.iconCleric.src = imageCleric.default;
+    this.iconRogue.src = imageRogue.default;
+    this.iconWizard.src = imageWizard.default;
+    this.iconCraft.src = imageCraft.default;
+    this.iconCoin.src = imageCoin.default;
+    this.iconCastle.src = imageCastle.default;
+    this.iconLion.src = imageLion.default;
+    this.iconRuins.src = imageRuins.default;
+    this.iconVillage.src = imageVillage.default;
+    this.iconX.src = imageX.default;
+    this.iconTower.src = imageTower.default;
+    this.iconStar.src = imageStar.default;
+    this.iconClanmoot.src = imageClanmoot.default;
+    this.iconPointOfInterest.src = imagePOI.default;
+    this.iconTotem.src = imageTotem.default;
+    this.iconSkullCrossbones.src = imageSkull.default;
+    this.iconMonument.src = imageMonument.default;
+    this.iconMonolith.src = imageMonolith.default;
+    this.iconWaterfall.src = imageWaterfall.default;
     
     canvas.onselectstart = function(){return false};
     
     this.map.onload = ()=>{this.render()};
-    this.map.src = imageWorldMap;
+    this.map.src = imageWorldMap.default;
     
   
   
@@ -2460,16 +2460,16 @@ export default class Game {
     //var context = canvas.getContext("2d");
     
 	  //Landmarks
-    for(var i = 0; i < g_landmarks.length; i++)
+    for(let i = 0; i < g_landmarks.length; i++)
 	  {
-		  var hex = vec4.clone(g_landmarks[i].hex);
-		  var pos = g_hex.hexToPixel(hex);
+		  const hex = vec4.clone(g_landmarks[i].hex);
+		  let pos = g_hex.hexToPixel(hex);
 		  pos = vec4.transformMat4(vec4.create(), pos, this.mvp);
 		  
-		  var drawIcon = false;
+		  let drawIcon = false;
 		  
 		
-		  var icon;
+		  let icon;
 		  switch(g_landmarks[i].type)
 		  {
 			  case 1:
