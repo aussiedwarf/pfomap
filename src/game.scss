@@ -253,8 +253,8 @@ canvas {
   position: absolute;
   overflow: hidden;
   display: table;
-  right: -240px;
-  width: 250px;
+  right: -250px;
+  width: 260px;
 
   
   z-index: 200;
@@ -267,7 +267,7 @@ canvas {
   
   background-color: rgba(255,255,255,0.75);
   color: #000000;
-  padding: 0px 20px;
+  padding: 5px 20px;
   
   border:2px solid black;
   
@@ -291,34 +291,47 @@ canvas {
 
 #legendhead {
 
-  float: left;
+  //float: left;
 
-  height: 11em;
-  width: 1.0em;
+  //height: 11em;
+  width: 20px;
   
-  overflow: hidden;
+  position: relative;
+  display: table-cell;
+  //background-color: pink;
   
-	margin-right: 1em;
+  //overflow: hidden;
+  
+	//margin-right: 1em;
 }
 
-#legendvert {
-  line-height: 1.0em;
+#legendvert{
+  top: 50%;
+  left: 0%;
+  position: absolute;
+}
+
+#legendrotate {
+  //line-height: 1.0em;
   
-  display: block;
+  //display: block;
   
-  white-space: nowrap;
+  //white-space: nowrap;
   
+  transform: translateX(-50%) translateY(-50%) rotate(270deg);
+  //transform: rotate(270deg) translate(-11em,0);
+  //transform-origin: 0 0;
   
-  transform: rotate(270deg) translate(-11em,0);
-  transform-origin: 0 0;
-  
-  text-align: center;
+  //text-align: center;
 }
 
 
 #legendcontent {
-  float:left;
-  width: 200px;
+  //float:left;
+  //width: 225px;
+  //background-color: cyan;
+  position: relative;
+  display: table-cell;
 }
 
 #legend img {

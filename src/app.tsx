@@ -85,7 +85,7 @@ export default class App extends React.Component {
   constructor(props: any){
     super(props);
     this.state = {
-      viewTypesState: true,
+      viewTypesState: false,
       viewHexTypesState: true,
       viewLandmarksState: true,
       viewBordersState: false,
@@ -166,8 +166,8 @@ export default class App extends React.Component {
         <div id="myDiv">
           <div id="menu">
             Pathfinder Online Map
-            <p />Last Update: 9th June, 2017
-            <br />Territory Update: 8th October, 2016
+            <p />Last Update: 23rd July, 2020
+            {/*}<br />Territory Update: 8th October, 2016*/}
             <p />Left click and drag to scroll, use the scroll wheel to zoom and double click on a hex to keep it highlighted.
             <p />
 
@@ -192,12 +192,14 @@ export default class App extends React.Component {
               checked={this.state.viewLandmarksState}
               onChange={this.viewLandmarksChange}/> View landmarks<br/>
 
+            {/*
             <input type="checkbox" 
               id="cbViewBorders" 
               name="viewBorders" 
               value="viewBorders"
               checked={this.state.viewBordersState}
               onChange={this.viewBordersChange}/> View territory<br/>
+              */}
             
 
             <input type="checkbox" 
@@ -252,25 +254,27 @@ export default class App extends React.Component {
           <div id="legend">
 		        <div id="legendhead">
 		          <div id="legendvert">
-		            Legend
+		            <div id="legendrotate">
+		              Legend
+		            </div>
 		          </div>
 		        </div>
 		        <div id="legendcontent">
-		          <img src={imageCoin} /> Auction House
-		          <br /><img src={imageCraft} /> Crafting
-		          <br /><img src={imageCleric} /> Cleric Training
-		          <br /><img src={imageFighter} /> Fighter Training
-		          <br /><img src={imageRogue} /> Rogue Training
-		          <br /><img src={imageWizard} /> Wizard Training
-		          <br /><img src={imageClanmoot} /> PC Settlement
-		          <br /><img src={imageVillage} /> NPC Settlement
-		          <br /><img src={imageStar} /> NPC Town
-		          <br /><img src={imageWaterfall} /> Unclaimed Settlement Hex
-		          <br /><img src={imageSkull} /> Inactive Settlement
-		          <br /><img src={imagePOI} /> Protected Hex
-		          <br /><img src={imageTotem} /> Fanes
-		          <br /><img src={imageMonument} /> Location Achievement
-		          <br /><img src={imageMonolith} /> Unmarked Achievement
+		          <img src={imageCoin.default} /> Auction House
+		          <br /><img src={imageCraft.default} /> Crafting
+		          <br /><img src={imageCleric.default} /> Cleric Training
+		          <br /><img src={imageFighter.default} /> Fighter Training
+		          <br /><img src={imageRogue.default} /> Rogue Training
+		          <br /><img src={imageWizard.default} /> Wizard Training
+		          <br /><img src={imageClanmoot.default} /> PC Settlement
+		          <br /><img src={imageVillage.default} /> NPC Settlement
+		          <br /><img src={imageStar.default} /> NPC Town
+		          <br /><img src={imageWaterfall.default} /> Unclaimed Settlement Hex
+		          <br /><img src={imageSkull.default} /> Inactive Settlement
+		          <br /><img src={imagePOI.default} /> Protected Hex
+		          <br /><img src={imageTotem.default} /> Fanes
+		          <br /><img src={imageMonument.default} /> Location Achievement
+		          <br /><img src={imageMonolith.default} /> Unmarked Achievement
 		        </div>
 		      </div>
 		    </div>

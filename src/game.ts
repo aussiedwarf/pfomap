@@ -44,7 +44,7 @@ import * as imageRuins from './images/ruins.png';
 import * as imageTower from './images/tower.png';
 import * as imageX from './images/x.png';
 
-var g_hex = new HexInfo();
+const g_hex = new HexInfo();
 
 
 //https://css-tricks.com/snippets/javascript/get-url-variables/
@@ -105,20 +105,20 @@ export default class Game {
   selectedHex: vec4 = vec4.fromValues(0,0,0,1);//new Vec4(0,0,0,1);
 	selected: boolean = false;
   
-  enabledIcons: boolean = true;
-  enabledDrawHexCoords = false;
-  enabledDrawAlliance = false;
-  enabledDrawGrid = true;
-  enabledDrawHexTypes = true;
-  enabledDrawAlignment = false;
-  enabledDrawControllingTowers = true;
-  enabledDrawRegions = false;
-  enabledDrawBorders = false;
+  enabledIcons: boolean = false;
+  enabledDrawHexCoords: boolean = false;
+  enabledDrawAlliance: boolean = false;
+  enabledDrawGrid: boolean = true;
+  enabledDrawHexTypes: boolean = true;
+  enabledDrawAlignment: boolean = false;
+  enabledDrawControllingTowers: boolean = true;
+  enabledDrawRegions: boolean = false;
+  enabledDrawBorders: boolean = false;
   enabledDrawLandmarks: boolean = true;
-  enabledDrawBulk = false;
+  enabledDrawBulk: boolean = false;
   
   redraw: boolean = false;
-  enabledDrawPaper = false;
+  enabledDrawPaper: boolean = false;
   
   animation: Array<any>;
   

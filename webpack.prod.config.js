@@ -34,14 +34,27 @@ module.exports = {
   },
   target: 'web',
   devtool: '#source-map',
+  mode: 'production',
   // Webpack 4 does not have a CSS minifier, although
   // Webpack 5 will likely come with one
   optimization: {
+    usedExports: true,
     minimizer: [
       new UglifyJsPlugin({
-        cache: true,
+        uglifyOptions: {
+          warnings: false,
+          parse: {},
+          compress: {},
+          mangle: true, // Note `mangle.properties` is `false` by default.
+          output: null,
+          toplevel: false,
+          nameCache: null,
+          ie8: false,
+          keep_fnames: false,
+        },
+        cache: false,
         parallel: true,
-        sourceMap: true // set to true if you want JS source maps
+        sourceMap: false // set to true if you want JS source maps
       }),
       new OptimizeCSSAssetsPlugin({})
     ]
